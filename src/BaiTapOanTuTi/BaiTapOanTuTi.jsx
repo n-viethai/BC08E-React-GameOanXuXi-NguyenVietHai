@@ -7,10 +7,6 @@ import { connect } from "react-redux";
 
 class BaiTapOanTuTi extends Component {
   render() {
-    // let keyframe = `
-    //   @keyframes randomItem
-    // `
-    console.log(Date.now());
     return (
       <div className="wrapper">
         <div className="game__container mt-5">
@@ -29,10 +25,14 @@ class BaiTapOanTuTi extends Component {
                   let count = 0;
                   let randomComputerItem = setInterval(() => {
                     this.props.dispatch(action);
-                    count ++;
-                    if (count >= 20) {
+                    count++;
+                    if (count >= 15) {
                       // Dùng hàm setinterval
                       clearInterval(randomComputerItem);
+                      const action = {
+                        type: "END_GAME",
+                      };
+                      this.props.dispatch(action);
                     }
                   }, 100);
                 }}
