@@ -1,0 +1,37 @@
+@font-face {
+	font-family: 'font-game';
+	src: url('../asset/font/Pony.ttf');
+}
+
+.wrapper {
+	height: 100vh;
+	background-color: #000;
+	font-family: 'font-game';
+}
+
+.game__container{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: url(../asset/gameOanTuTi/bgGame.png) 0px 120px / 100% no-repeat;
+}
+
+.speech-bubble {
+	position: relative;
+	background: #34D399;
+	border-radius: .4em;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 19px solid transparent;
+	border-top-color: #34D399;
+	border-bottom: 0;
+	margin-left: -19px;
+	margin-bottom: -19px;
+}
